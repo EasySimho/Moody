@@ -7,6 +7,7 @@ import { Heart } from 'lucide-react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from './lib/firebase';
 import { signOut } from 'firebase/auth';
+import Logo from '../public/moody-icon.png';
 
 function App() {
   const [user] = useAuthState(auth);
@@ -36,7 +37,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <Heart className="w-7 h-7 text-pink-500" />
+              <img src={Logo} className="w-7" />
               <h1 className="text-xl font-bold text-gray-900">Mood Together</h1>
             </div>
             <div className="flex items-center space-x-3">
